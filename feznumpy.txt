@@ -1,0 +1,100 @@
+import numpy as np;
+
+a=np.array([1,2,3,4]);
+b=np.array([5,6,7,8]);
+
+***************************************************************
+
+print(a.ndim)#dimensions
+print(a.size)#size
+print(a.shape)#shape
+print(a.dtype)#datatype
+print(a.itemsize)#itemsize
+
+***************************************************************
+
+print(np.add(a,b))#add
+print(np.subtract(a,b))#sub
+print(np.multiply(a,b))#mul
+print(np.divide(a,b))#div
+print(np.power(a,b))#power
+print(np.remainder(a,b))#remainder
+print(np.mod(a,b))#mod
+print(np.absolute(a,b))#absolute
+
+***************************************************************
+
+#automatic Array creation
+np.zeros((2,3))#zeros
+np.ones((2,3))#ones
+np.empty((2,3))#Empty
+np.arange(1,5,0.5)#array range
+np.linspace(1,5,8)#partitions 
+np.random.random((2,3))#random
+
+***************************************************************
+
+#martrix
+
+c=np.array([[1,2,3],[4,5,6]])
+print(c)
+
+slice=c[:2,:2]#slice array from left and right
+print(slice)
+
+index=c[[1,0],[0,1]]#uses index to fetch data
+print(index)
+
+print(np.sqrt(c))#square root
+
+***************************************************************
+
+m1=np.array([[1,2,3],[4,5,6],[7,8,9]])
+m2=np.array([[1,2,3],[4,5,6],[7,8,9]])
+m3=np.array([[1,2,3],[4,5,6],[7,8,9]])
+
+vstack=np.vstack((m1,m2,m3))#vertical mapping
+print(vstack)
+hstack=np.hstack((m1,m2,m3))#horizontal mapping
+print(hstack)
+vslp=np.vsplit(vstack,3)#vertical split by 3
+print(vslp)
+hslp=np.hsplit(hstack,3)#horizontal split by 3
+print(hslp)
+
+m10=np.dot(m1,m2);#matrix Multiplication
+print(m10)
+
+***************************************************************
+
+b=np.array([[True,True,False],[True,False,False]])
+print(np.all(b))#all sghould be true
+print(np.all(b,axis=0))
+print(np.all(b,axis=1))
+
+***************************************************************
+
+b=np.array([[True,True,False],[True,False,False]])
+print(np.any(b))#any one of themshould be true
+print(np.any(b,axis=0))
+print(np.any(b,axis=1))
+
+***************************************************************
+
+c=np.arange(9)
+print(c)
+re=c.reshape(3,3)#partions into arrays
+print(re)
+
+***************************************************************
+
+f=np.array([23,34,45,67])
+print(np.sqrt(f))
+print(np.exp(f))
+print(np.sin(f))
+print(np.cos(f))
+print(np.sum(f))
+print(np.std(f))
+print(np.log(f))
+
+***************************************************************

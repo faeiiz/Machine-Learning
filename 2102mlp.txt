@@ -1,0 +1,40 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+x1=np.array([10,20,30,40,50])
+y1=np.array([5,15,25,35,45])
+x2=np.array([3,13,23,33,43])
+y2=np.array([2,12,22,32,42])
+
+
+plt.scatter(x1,y1,s=1000,alpha=1)#scatter plot s=size alpha=opacity  
+plt.scatter(x2,y2,s=200)
+plt.show()
+
+plt.bar(x1,y1 , width=10) #bar graph 
+plt.barh(x2,y2, color='r',height=10)#horizontal bar graph #height in horizontal
+plt.show()
+
+plt.hist(x1)#histograph for individual array
+
+marks=np.array([30,35,45,33,50])
+name=np.array(["Web","Data","Mobile","Cs","iot"])
+ex=[0.2,0.2,0.2,0.2,0.2]
+color=['r','r','r','r','r']
+plt.pie(marks,labels=name,startangle=90,explode=ex,shadow=True,colors=color)
+plt.legend(title="Track",loc='right')#shows legend
+plt.show()
+
+CSV**********************
+
+m=pd.read_csv("marks.csv")
+n=np.array(m['Name'])
+print(name)
+p=np.array(m['Percentage'])
+print(per)
+
+# plt.scatter(name,per)
+# plt.bar(name,per)
+plt.pie(per,labels=n)
+plt.show()

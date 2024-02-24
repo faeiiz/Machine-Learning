@@ -1,0 +1,24 @@
+import numpy as np;
+import pandas as pd;
+import matplotlib.pyplot as plt;
+
+x1=np.array([5,8,12,13,19,21])
+x2=np.array([5,8,12,13,19,21])
+x3=np.array([3,4,6,7,8,23,45])
+x4=np.array([3,4,5,8,9,26,34])
+# plt.plot(x1,x2)
+# plt.plot(x3,x4)
+plt.plot(x1,x2,'o') #scatter plot
+plt.plot(x1,x2,marker='o') #points are marked 
+plt.plot(x1,x2,marker='o',ms=10,mec='r',mfc='y',linestyle='dashed',color='g',linewidth=4)#ms=Size mec=edge color mfc=fill color
+# font={'size':15,'color':'b'}
+plt.title("Fez",fontdict={'size':15,'color':'b'},loc='right')#title for plot
+plt.xlabel("X-Axis",fontdict={'size':20})
+plt.ylabel("Y-Axis",fontdict={'size':20})
+ 
+
+plt.subplot(2,1,1)#2 rows 1 column and 1st place
+plt.plot(x1,x2)#plots graph at first place
+plt.subplot(2,1,2)#2nd place
+plt.plot(x3,x4)#plots graph at second place
+plt.suptitle("Super Title")#main title 

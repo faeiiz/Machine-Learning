@@ -1,0 +1,34 @@
+import pandas as pd
+import matlablib.pyplot as plt
+
+pok=pd.read_csv('pdata.csv')#imports csv file into an object
+
+***************************************************************************************
+
+pok.head() #prints the first 5 data
+pok.tail()#print the last 5 data 
+pok.head(10)#prints the first 10 rows
+
+***************************************************************************************
+
+#pok.loc(10)#prints the 10th index data
+pok.dropna()#skips the null value
+pok.fillna('abc')#fills default value to null
+new=pok['Type 2'].fillna('other')#fills default value as others wherever type 2 collumn is null
+new=pok['Type 2'].fillna('other',inplace=True)#changes the values in the original dataset
+
+***************************************************************************************
+
+pok['total']=pok['HP']+pok['Attack']+pok['Defense']#adds 3 values from the dataset and adds a new collumn named total
+pok['tper']=pok['total']/3#finds percentage and adds a new collumn named percentage in the data
+print(pok)
+
+***************************************************************************************
+pok.to_csv('pok1.csv')#overwrite the data or creeate a new file and adds the new data in to the csv file
+pok.sort_values(['Speed'],ascending=1)#sort data ascending order with the column Speed
+pok.sort_values(['Speed'],ascending=0)#sort data descending order with the column Speed
+
+***************Graphs*******************************************************************
+pok.plot() #linear graph
+pok.plot(kind='scatter',x='Name',y='Speed')#scatter plot
+pok['Speed'].plot(kind='hist')#histogram
