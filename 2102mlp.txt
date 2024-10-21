@@ -38,3 +38,5 @@ print(per)
 # plt.bar(name,per)
 plt.pie(per,labels=n)
 plt.show()
+
+plt.show ()//1
